@@ -1,0 +1,4 @@
+#!/bin/sh -xe
+exec 2>&1
+ln -fs {{pkg.path}}/venv        {{pkg.svc_var_path}}
+ln -fs {{pkg.path}}/main.py     {{pkg.svc_var_path}}

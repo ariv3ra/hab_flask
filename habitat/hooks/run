@@ -1,0 +1,9 @@
+#!/bin/sh -xe
+
+# Let's us see app log and errors.
+exec 2>&1
+
+cd {{pkg.svc_var_path}}
+
+source venv/bin/activate
+python main.py
