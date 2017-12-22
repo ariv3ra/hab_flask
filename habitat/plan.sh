@@ -1,18 +1,15 @@
 pkg_name=hab_flask
 pkg_origin=ariv3ra
-pkg_version="0.1.2"
-pkg_maintainer="The Habitat Maintainers <humans@habitat.sh>"
+pkg_version="0.1.3"
+pkg_maintainer="Angel Rivera"
 pkg_license=("Apache-2.0")
-# pkg_upstream_url="https://github.com/ariv3ra/gustos"
-pkg_svc_user="root"
+pkg_source="https://github.com/ariv3ra/hab_flask"
+pkg_upstream_url="https://github.com/ariv3ra/hab_flask"
 pkg_build_deps=(core/virtualenv)
 pkg_deps=(core/coreutils core/python2)
 pkg_exports=([http]=5000)
 pkg_expose=(http)
-
-# we copy in the source code in the `unpack` phase and need to put
-# something here due to https://github.com/habitat-sh/habitat/issues/870
-pkg_source="fake"
+pkg_svc_user="root"
 
 # Need to opt-out of all of these steps, as we're copying in source code
 do_download() {
