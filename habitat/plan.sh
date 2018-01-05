@@ -23,7 +23,7 @@ do_clean() {
 }
 
 do_unpack() {
-    # Because our habitat files liver under build/.
+    # Because our habitat files live under build/.
     PROJECT_ROOT="${PLAN_CONTEXT}/.."
 
     mkdir -p $pkg_prefix
